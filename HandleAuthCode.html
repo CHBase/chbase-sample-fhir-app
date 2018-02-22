@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <link href="Style/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/settings.js"></script>
+    <script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/handleAuthCode.js"></script>
+</head>
+
+<body onload="submitAuthCode()">
+    <div class="header">
+        <h1 class="logo">Fhir Sample App</h1>
+        <div class="header-right-content">
+            <h3 class="Page">AuthCode Handler</h3>
+            <br />
+            <button  type="button" id="Back" class="back" title="Reset"></button>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box authCode" id="authCodeDiv" hidden="true">
+            <h3>AuthCode</h3>
+            <br />
+            <span id="authCodeText"></span>
+        </div>
+        <div class="error" hidden="true" id="error">
+            <span id="ErrorHeading" class="error-heading"></span>
+            <br />
+            <br />
+            <span id="ErrorContent" class="error-content"></span>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

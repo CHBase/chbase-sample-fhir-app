@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <link href="Style/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/settings.js"></script>
+    <script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/observation.js"></script>
+</head>
+
+<body onload="getObservation()">
+    <div class="header">
+        <h1 class="logo">Fhir Sample App</h1>
+        <div class="header-right-content">
+            <h3 class="Page">Observations</h3>
+            <br />
+            <button type="button" id="Back" class="back" title="Reset"></button>
+        </div>
+    </div>
+    <div class="box">
+        <div class="searchDiv">
+            <input type="text" id="DateSearch" name="date_search" placeholder="Date" />
+            <input type="text" id="LastUpdatedSearch" name="last_updated_search" placeholder="Last Updated" />
+            <input type="text" id="CodeSearch" name="code" placeholder="Code" />
+            <br />
+            <div class="searchButtonDiv">
+                <button type="button" id="Search" class="searchButton">Search</button>
+                <button type="button" id="Info" class="infoButton"></button>
+            </div>
+        </div>
+        <div class="box infoBox" id="infoDiv" hidden="true">
+            <pre id="InfoText">
+According to FHIR Date and Last Updated can be :
+    eq2013-01-14
+    lt2013-01-14T10:00
+    gt2013-01-14T10:00
+    ge2013-03-14
+    le2013-03-14
+    sa2013-03-14
+    eb2013-03-14
+    ap2013-03-14 and 2013-03-14
+<a href="https://www.hl7.org/fhir/search.html#date">https://www.hl7.org/fhir/search.html#date</a>
+
+Code can be either Snomed or Loinc codes .
+It can be represent just with codes or by giving the url reference of the code format 
+For snomed codes, 
+i.e"code=http://snomed.info/sct|434912009" for blood glucose or simply "code=434912009".
+For loinic codes, 
+"code=http://loinc.org|3137-7" for height or simply "code=3137-7".
+The Snomed Codes and Loinc codes that we have used are : 
+Loinic Codes -:
+    Height :
+        "3137-7" "8302-2" "3138-5" "8301-4" "8303-0" "8304-8"
+        "8305-5" "8306-3" "8307-1"
+    Weight : 
+        "29463-7" "3141-9" "3142-7" "18833-4" "50064-5" "8339-4" 
+        "8335-2" "8338-6" "8340-2" "8341-0" "8342-8" "8343-6"
+        "8344-4" "8345-1" "8346-9" "8347-7" "8348-5" "8349-3"
+        "8350-1" "8351-9"
+    BloodGlucose : "15074-8" 
+Snomed Codes -:
+    BloodGlucose :"434912009" 
+    Weight : "27113001"
+            </pre>
+        </div>
+        <div Class="observationTableDiv" id="ObservationTableDiv">
+        </div>
+        <div class="addButton">
+            <button type="button" id="addHeight">Add Height</button>
+            <button type="button" id="addWeight">Add Weight</button>
+            <br />
+        </div>
+        <div class="afterFloat">
+        </div>
+        <div class="box observationBox" id="ObservationDiv" hidden="true">
+            <h3>Observation</h3>
+            <br />
+            <span id="ObservationText"></span>
+        </div>
+
+        <button class="button showResponse" type="button" id="showResponse">Show Response</button>
+        <div class="error" hidden="true" id="error">
+            <span id="ErrorHeading" class="error-heading"></span>
+            <br />
+            <br />
+            <span id="ErrorContent" class="error-content"></span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

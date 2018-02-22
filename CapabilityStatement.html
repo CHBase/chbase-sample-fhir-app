@@ -1,0 +1,36 @@
+<html>
+    
+    <head>
+        <link href="Style/StyleSheet.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="Scripts/settings.js"></script>
+        <script type="text/javascript" src="Scripts/common.js"></script>
+        <script type="text/javascript" src="Scripts/capabilityStatement.js"></script>
+    </head>
+    
+    <body onload="getCapabilityStatement()">
+        <div class="header">
+            <h1 class="logo">Fhir Sample App</h1>
+            <div class="header-right-content">
+                <h3 class="Page">Capability Statement</h3>
+                <br />
+                <button  type="button" id="Back" class="back" title="Reset"></button>
+            </div>
+        </div>
+        <div class="box">
+            <h3 class="capabilityHeader">Capability Statement</h3>
+            <br />
+            <div class="box capability" id="capabilityDiv" hidden="true">
+                <span id="capabilityStatementText"></span>
+            </div>
+            <div class="error" hidden="true" id="error">
+                <span id="ErrorHeading" class="error-heading"></span>
+                <br />
+                <br />
+                <span id="ErrorContent" class="error-content"></span>
+            </div>
+        </div>
+    
+    </body>
+    
+    </html>

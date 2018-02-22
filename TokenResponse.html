@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link href="Style/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/settings.js"></script>
+    <script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/tokenResponse.js"></script>
+</head>
+
+<body onload="populateResponse()">
+    <div class="header">
+        <h1 class="logo">Fhir Sample App</h1>
+        <div class="header-right-content">
+            <h3 class="Page">Response Handler</h3>
+            <br />
+            <button  type="button" id="Back" class="back" title="Reset"></button>
+        </div>
+    </div>
+    <div class="box">
+        <div class="accessTokenResponse box" id="AccessTokenResponseDiv">
+            <h3>Access Token Response</h3>
+            <br />
+            <span id="accessTokenResponseText"></span>
+        </div>
+        <div class="accessToken box" id="AccessTokenDiv">
+            <h3>Access Token</h3>
+            <br />
+            <span id="accessTokenText"></span>
+        </div>
+        <div class="iDToken box" id="iDTokenDiv">
+            <h3>ID Token</h3>
+            <br />
+            <span id="iDTokenText"></span>
+        </div>
+        <div class="afterFloat"></div>
+        <button class="button validate_idToken" type="button" id="validateIDToken">Validate ID Token</button>
+        <div class="afterFloat"></div>
+        <button class="button done" type="button" id="done">DONE</button>
+        <div class="error" hidden="true" id="error">
+            <span id="ErrorHeading" class="error-heading"></span>
+            <br />
+            <br />
+            <span id="ErrorContent" class="error-content"></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

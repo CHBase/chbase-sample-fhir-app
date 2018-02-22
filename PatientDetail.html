@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <link href="Style/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/settings.js"></script>
+    <script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/patientDetail.js"></script>
+</head>
+
+<body onload="getPatientDetail()">
+    <div class="header">
+        <h1 class="logo">Fhir Sample App</h1>
+        <div class="header-right-content">
+            <h3 class="Page">Patient Details</h3>
+            <br />
+            <button  type="button" id="observation">Observations</button>
+            <br />
+            <br />
+            <button  type="button" id="Back" class="back" title="Reset"></button>
+        </div>
+    </div>
+    <div class="box">
+        <table>
+            <tr>
+                <td class="heading">Include Following Details</td>
+                <td>
+                    <input type="checkbox" name="include" value="singleton">singleton</input>
+                    <br />
+                    <input type="checkbox" name="include" value="contact">contact</input>
+                </td>
+            </tr>
+        </table>
+        <div class="run-button">
+            <button class="button" type="button" id="get">Get</button>
+        </div>
+        <div class="patientDetailTableDiv" id="patientDetailTableDiv">
+            
+        </div>
+        <div class="box patientBox" id="PatientDiv" hidden="true">
+            <h3>Patient</h3>
+            <br />
+            <span id="PatientText"></span>
+        </div>
+        <button class="button showResponse" type="button" id="showResponse">Show Response</button>
+        <div class="error" hidden="true" id="error">
+            <span id="ErrorHeading" class="error-heading"></span>
+            <br />
+            <br />
+            <span id="ErrorContent" class="error-content"></span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+body, h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background: #2c368e;
+    padding: 40px 20px;
+    color: #fff;
+    box-shadow: 0 2px 1px rgba(0,0,0,.2);
+}
+.header .header-right-content {
+    float: right;
+}
+.header-right-content button{
+    background:#fff;
+    min-width:150px;
+    font-size:15px;
+    color:#2c368e;
+    font-weight: bold;
+    cursor:pointer;
+    padding:5px 5px;
+}
+.header::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.header .logo {
+    float: left;
+}
+.box {
+    margin: 0 auto;
+    width: 80%;
+    min-height: 500px;
+    padding: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 12px rgba(0,0,0,.1);
+    font-size: 18px;
+    
+}
+.box table{
+    margin: 0 auto;
+    width:0%;
+}
+.box td{
+    width: 161px;
+    padding: 10px;
+}
+.heading{
+    font-weight: bolder;
+}
+.button{
+    padding:5px 15px;
+    font-size:20px;
+    border:none;
+    border-radius:20px;
+    min-width:100px;
+    cursor:pointer;
+    background:#2c368e;
+    color:#fff;
+    text-align :center;
+}
+.run-button{
+    margin: 0 auto;
+    width: 0%;
+    width: fit-content;
+    margin-top: 30px;
+}
+.error{
+    color: red;
+    text-align: center;
+}
+.error-heading{
+    font-weight: bolder;   
+}
+.error-content{
+    font-weight: lighter;   
+}
+.authCode{
+    height: 300px;
+    width: 50%;
+    word-break: break-all;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+.capability{
+    padding: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    overflow: scroll;
+    height: 300px
+}
+.capabilityHeader{
+    text-align: center;
+}
+.capability-button button{
+      background:#9ea3aa;
+      font-size:12px;
+}
+.accessToken{
+    float: left;
+    padding: 50px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 48%;
+    overflow: scroll;
+}
+.iDToken{
+    float: right;
+    padding: 50px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 48%;
+    overflow: scroll;
+}
+.afterFloat {
+    display: block;
+    clear: both;
+    content: "";
+}
+.accessTokenResponse{
+    padding: 50px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 100%;
+    overflow: scroll;
+    min-height: 100px;
+    
+}
+.validate_idToken 
+{
+    float: right;
+    background:#9ea3aa;
+    font-size: 12px;
+  
+}
+.done{
+    margin-top: 30px;
+}
+.jwkuri{
+    float: right;
+    padding: 50px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 48%;
+    overflow: scroll;
+}
+
+.openId{
+    float: left;
+    padding: 50px;
+    margin-bottom: 50px;
+    height: 300px;
+    width: 48%;
+    overflow: scroll;
+} 
+.patientBox{
+    margin-top: 50px;
+    padding: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    overflow: scroll;
+    height: 300px
+}
+.showResponse{
+    background:#9ea3aa;
+    font-size: 12px;
+    
+}
+.patientTable{  
+    font-size:20px;
+    cursor:pointer;
+    color:#000;
+    text-align :left;
+    border-style: double;
+   
+}
+.patientTable tr:hover {
+    background-color:#f5f5f5;
+}
+.patientTable td{
+    border-bottom: 1px solid #ddd;
+    
+}
+.patientDetailTableDiv{
+    padding: 10px 10px 10px 10px;
+   
+}
+.patientDetailTableDiv table{
+    width: 100%;
+    width: -webkit-fill-available;
+    border-style: double;
+    text-align: center;
+    margin: 30px;
+    font-size: 14px;
+}
+.patientDetailTableDiv th{
+    text-transform: capitalize;
+}
+.patientDetailTableDiv td,th,tr{
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+.patientDetailTableDiv caption{
+    font-size: 16px;
+    font-weight:bold;
+}
+.patientDetailTableDiv img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.observationBox{
+    margin-top: 50px;
+    padding: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    overflow: scroll;
+    height: 300px
+}
+.observationTableDiv{
+    padding: 10px 10px 10px 10px;
+}
+.observationTableDiv table{
+    width:100%;
+    width: -webkit-fill-available;
+    border-style: double;
+    text-align: center;
+    margin: 30px;
+    font-size: 14px;
+}
+.observationTableDiv th{
+    text-transform: capitalize;
+}
+.observationTableDiv td,th,tr{
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+.observationTableDiv caption{
+    font-size: 16px;
+    font-weight:bold;
+}
+.addButton{
+    float: right;
+}
+.header-right-content .back{
+    background: white url(../Assets/reset.png) no-repeat center/80% padding-box;
+    min-width: 40px;
+    min-height: 40px;
+}
+.searchDiv{
+    width: 55%;
+    width: fit-content; 
+    margin : 0 auto;
+}
+.searchDiv input{
+    padding: 5px;
+}
+.searchButtonDiv{
+    padding: 10px;
+    width : 40%;
+    width: fit-content; 
+    margin : 0 auto;
+}
+.searchButton{
+    padding:5px 15px;
+    font-size:12px;
+    border:none;
+    border-radius:20px;
+    min-width:75px;
+    cursor:pointer;
+    background:#2c368e;
+    color:#fff;
+    text-align :center;
+}
+.infoButton{
+    background-image: url('../Assets/info.png');
+    background-size: 15px;
+    min-width: 15px;
+    min-height: 15px;
+    border: none;
+}
+.infoBox{
+    min-height: 5px;
+    padding: 5px;
+    width: 40%;
+    width:fit-content; 
+    font-size: 13px;
+}

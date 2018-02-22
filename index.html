@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <link href="Style/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/settings.js"></script>
+    <script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/index.js"></script>
+</head>
+
+<body onload="getCapabilityStatement()">
+    <div class="header">
+        <h1 class="logo">Fhir Sample App</h1>
+        <div class="header-right-content">
+            <h3 class="Page">Welcome</h3>
+        </div>
+    </div>
+    <div class="box">
+        <table>
+            <tr>
+                <td class="heading">Scope</td>
+                <td>
+                    <input type="checkbox" name="scopes" value="patient/*.read">patient/*.read</input>
+                    <br />
+                    <input type="checkbox" name="scopes" value="patient/*.write">patient/*.write</input>
+                    <br />
+                    <input type="checkbox" name="scopes" value="patient/*.*" checked>patient/*.*</input>
+                    <br />
+                    <input type="checkbox" name="scopes" value="user/*.*" checked>user/*.*</input>
+                    <br />
+                    <input type="checkbox" name="scopes" value="launch/patient" checked>launch/patient</input>
+                    <br />
+                    <input type="checkbox" name="scopes" value="openid" checked>openid</input>
+                    <br />
+                    <br />
+                    <input type="text" id="scope" name="scope" placeholder="Other Scopes" />
+                </td>
+            </tr>
+        </table>
+        <div class="run-button">
+            <button class="button" type="button" id="authorize">Authorize</button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="capability-button">
+            <button class="button" type="button" id="capabilityStatement">Capability Statement</button>
+        </div>
+
+    </div>
+    <div class="error" hidden="true" id="error">
+        <span id="ErrorHeading" class="error-heading"></span>
+        <br />
+        <br />
+        <span id="ErrorContent" class="error-content"></span>
+    </div>
+    </body>
+
+</html>
